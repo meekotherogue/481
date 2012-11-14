@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<script type="text/javascript" src="jquery.js"/>
+		<script type="text/javascript">
+
+		</script>
+		<style>
+			* {
+				margin: 0 auto;
+				width: 960px;
+			}
+			#title{
+				display:block;
+				position:abolute;
+				font-weight:500;
+				font-size:36px;
+				text-align:center;
+				outline:#000000 solid thin;
+			}
+			#feed{
+				position:absolute;
+				top:1px;
+			}
+			.topics{
+				outline:#000000 solid thin;
+			}
+			.images{
+				width:auto;
+				height:auto;
+			}
+			.tableText{
+				font-size:24px;
+				width:100%;
+			}
+			.tableLeft{
+				float:left;
+				width:70%;
+				height:183px;
+			}
+			.tableRight{
+				position:relative;
+				float:right;
+				width:30%;
+				height:183px;
+			}
+			.more{
+				position:absolute;
+				width:100px;
+				float:right;
+				bottom:10px;
+				right:10px;
+			}
+			.Expand{
+				position:relative;
+				height:585px;
+				display:none;
+				float:left;
+			}
+			.ExpandedInfo{
+				height:20%;
+				font-size:24px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="feed">
+			<div id="title">Trending Twitter Topic Title</div>
+			<div id="twitter" class="topics">
+				<div id="top" height="366">
+					<div class="tableText">
+						<div class="tableLeft" style="background-color:#FFFFCC;">
+							<div style="position:relative; top:30%;" id="TweetArea">
+								"This is an example of a tweet that might appear in this area" <br/>&nbsp;&nbsp;&nbsp;~ @UserName
+							</div>
+						</div>
+						<div class="tableRight">
+							<span style="position:relative; top:30%;"># of tweets on Topic
+								<img class="images" src="images\twitter.png" alt="Twitter Bird" width="40" height="33"/>
+							</span>
+							<button id="TwitterMore" class="more">More</button>
+						</div>						
+					</div>
+				</div>
+				<div id="bottomTwitter" class="Expand" style="background-color:#FFFFCC;">
+					<div class="ExpandedInfo">"Here is tweet: 1" <br/>&nbsp;&nbsp;&nbsp;~ @UserName
+					</div>
+					<div class="ExpandedInfo">"Here is tweet: 2" <br/>&nbsp;&nbsp;&nbsp;~ @UserName
+					</div>
+					<div class="ExpandedInfo">"Here is tweet: 3" <br/>&nbsp;&nbsp;&nbsp;~ @UserName
+					</div>
+					<div class="ExpandedInfo">"Here is tweet: 4" <br/>&nbsp;&nbsp;&nbsp;~ @UserName
+					</div>
+					<div class="ExpandedInfo">"Here is tweet: 5" <br/>&nbsp;&nbsp;&nbsp;~ @UserName
+					</div>
+					<div>
+						<button id="Tweets" class="more">More</button>
+					</div>
+				</div>
+			</div>
+			<div id="wikipedia" class="topics">
+				<div id="top" height="366">
+					<div class="tableText">
+						<div class="tableLeft" style="background-color:#FFCCCC;">
+							<div style="position:relative; top:30%;" id="WikiArea">
+								"This is an example of a summary for the wiki page"
+							</div>
+						</div>
+						<div class="tableRight">
+							<span style="position:relative; top:30%;"># of articles on Topic
+								<img class="images" src="images\wiki.png" alt="Wikipedia Globe" width="40" height="36"/>
+							</span>
+							<button id="WikiMore" class="more">More</button>
+						</div>						
+					</div>
+				</div>
+				<div id="bottomWiki" class="Expand" style="background-color:#FFCCCC;">
+					<div class="ExpandedInfo">"Here is wiki article: 1"
+					</div>
+					<div class="ExpandedInfo">"Here is wiki article: 2"
+					</div>
+					<div class="ExpandedInfo">"Here is wiki article: 3"
+					</div>
+					<div class="ExpandedInfo">"Here is wiki article: 4"
+					</div>
+					<div class="ExpandedInfo">"Here is wiki article: 5"
+					</div>
+					<div>
+						<button id="Wikis" class="more">More</button>
+					</div>
+				</div>
+			</div>
+			<div id="instagram" class="topics">
+				<div id="top" height="366">
+					<div class="tableText">
+						<div class="tableLeft" style="background-color:#FF99CC;">
+							<div style="position:relative; top:30%;" id="InstaArea">
+								<img class="images" src="images\instagram.png" alt="Instagram Camera" width="60" height="60"/>
+								<img class="images" src="images\instagram.png" alt="Instagram Camera" width="60" height="60"/>
+								<img class="images" src="images\instagram.png" alt="Instagram Camera" width="60" height="60"/>
+								(instagram images)
+							</div>
+						</div>
+						<div class="tableRight">
+							<span style="position:relative; top:30%;"># of images on Topic
+								<img class="images" src="images\instagram.png" alt="Instagram Camera" width="40" height="30"/>
+							</span>
+							<button id="InstaMore" class="more">More</button>
+						</div>						
+					</div>
+				</div>
+				<div id="bottomInsta" class="Expand" style="background-color:#FF99CC;">
+					<div class="ExpandedInfo"><img id="image" class="images" src="images\instagram.png" alt="Instagram Camera" width="40" height="30"/>
+					 <br/>&nbsp;&nbsp;&nbsp;~ @UserName
+					</div>
+					<div class="ExpandedInfo"><img id="image" class="images" src="images\gplus.png" alt="Instagram Camera" width="40" height="30"/>
+					 <br/>&nbsp;&nbsp;&nbsp;~ @UserName
+					</div>
+					<div class="ExpandedInfo"><img id="image" class="images" src="images\twitter.png" alt="Instagram Camera" width="40" height="30"/>
+					 <br/>&nbsp;&nbsp;&nbsp;~ @UserName
+					</div>
+					<div class="ExpandedInfo"><img id="image" class="images" src="images\wiki.png" alt="Instagram Camera" width="40" height="30"/>
+					 <br/>&nbsp;&nbsp;&nbsp;~ @UserName
+					</div>
+					<div class="ExpandedInfo"><img id="image" class="images" src="images\instagram.png" alt="Instagram Camera" width="40" height="30"/>
+					 <br/>&nbsp;&nbsp;&nbsp;~ @UserName
+					</div>
+					<div>
+						<button id="Instas" class="more">More</button>
+					</div>
+				</div>
+			</div>
+			<div id="googlenews" class="topics">
+				<div id="top" height="366">
+					<div class="tableText">
+						<div class="tableLeft" style="background-color:#CCFFCC;">
+							<div style="position:relative; top:30%;" id="GoogleArea">
+								"Summary of top Google New article"
+							</div>
+						</div>
+						<div class="tableRight">
+							<span style="position:relative; top:30%;"># of articles on Topic
+								<img class="images" src="images\gplus.png" alt="GooglePlus" width="40" height="40"/>
+							</span>
+							<button id="GoogleMore" class="more">More</button>
+						</div>						
+					</div>
+				</div>
+				<div id="bottomGoogle" class="Expand" style="background-color:#CCFFCC;">
+					<div class="ExpandedInfo">"Here is google article: 1"
+					</div>
+					<div class="ExpandedInfo">"Here is google article: 2"
+					</div>
+					<div class="ExpandedInfo">"Here is google article: 3"
+					</div>
+					<div class="ExpandedInfo">"Here is google article: 4"
+					</div>
+					<div class="ExpandedInfo">"Here is google article: 5"
+					</div>
+					<div>
+						<button id="Googles" class="more">More</button>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$("#TwitterMore").click(function(){
+				if($("#bottomTwitter").is(":hidden"))
+				{
+					$("#bottomTwitter").slideDown('slow');
+					$("#TwitterMore").html("Less");
+				}
+				else
+				{
+					$("#bottomTwitter").slideUp('slow');
+					$("#TwitterMore").html("More");
+				}
+			});
+			$("#WikiMore").click(function(){
+				if($("#bottomWiki").is(":hidden"))
+				{
+					$("#bottomWiki").slideDown('slow');
+					$("#WikiMore").html("Less");
+				}
+				else
+				{
+					$("#bottomWiki").slideUp('slow');
+					$("#WikiMore").html("More");
+				}
+			});
+			$("#InstaMore").click(function(){
+				if($("#bottomInsta").is(":hidden"))
+				{
+					$("#bottomInsta").slideDown('slow');
+					$("#InstaMore").html("Less");
+				}
+				else
+				{
+					$("#bottomInsta").slideUp('slow');
+					$("#InstaMore").html("More");
+				}
+			});
+			$("#GoogleMore").click(function(){
+				if($("#bottomGoogle").is(":hidden"))
+				{
+					$("#bottomGoogle").slideDown('slow');
+					$("#GoogleMore").html("Less");
+				}
+				else
+				{
+					$("#bottomGoogle").slideUp('slow');
+					$("#GoogleMore").html("More");
+				}
+			});
+			$("#Tweets").click(function(){
+				var $kids=$("#bottomTwitter").children('div').each(function(){
+					var text = $(this).text();
+					var randomnumber=Math.floor(Math.random()*110)
+					var newText = "";
+					for(i = 0; i < 111; i++)
+					{
+						newText = text.replace(": "+i,": "+randomnumber);
+						if(newText != text)
+						{
+							$(this).text(newText);
+							break;
+						}
+					}
+				});
+			})
+			
+			$("#Googles").click(function(){
+				var $kids=$("#bottomGoogle").children('div').each(function(){
+					var text = $(this).text();
+					var randomnumber=Math.floor(Math.random()*110)
+					var newText = "";
+					for(i = 0; i < 111; i++)
+					{
+						newText = text.replace(": "+i,": "+randomnumber);
+						if(newText != text)
+						{
+							$(this).text(newText);
+							break;
+						}
+					}
+				});
+			})
+			
+			$("#Wikis").click(function(){
+				var $kids=$("#bottomWiki").children('div').each(function(){
+					var text = $(this).text();
+					var randomnumber=Math.floor(Math.random()*110)
+					var newText = "";
+					for(i = 0; i < 111; i++)
+					{
+						newText = text.replace(": "+i,": "+randomnumber);
+						if(newText != text)
+						{
+							$(this).text(newText);
+							break;
+						}
+					}
+				});
+			})
+			
+			$("#Instas").click(function(){
+				var $kids=$("#bottomInsta").children('div').each(function(){	
+					var randomnumber=Math.floor(Math.random()*4) + 1;
+					if(randomnumber==1)
+					{
+						$(this).find("#image").attr("src", "images\\instagram.png");
+					}
+					if(randomnumber==2)
+					{
+						$(this).find("#image").attr("src", "images\\gplus.png");
+					}
+					if(randomnumber==3)
+					{
+						$(this).find("#image").attr("src", "images\\twitter.png");
+					}
+					if(randomnumber==4)
+					{
+						$(this).find("#image").attr("src", "images\\wiki.png");
+					}
+				});
+			})
+		</script>
+	</body>
+	
+</html>
